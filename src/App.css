@@ -1,42 +1,100 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.app {
+  background-color: #42adfd;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.home-container {
+  width: 30%;
+  background-color: #ffffff;
+  height: 23%;
+  overflow-y: auto;
+  padding: 0 10px 0 10px;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.input-container {
+  width: 100%;
+  margin: auto;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  background-color: #ffffff;
+  width: 30%;
+  color: #43aefc;
+  font-size: x-large;
+  padding: 10px 0;
+  border-bottom: 2px solid #dedcdc;
+  padding: 13px 10px;
+  font-weight: 600;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.input {
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  font-size: medium;
+  text-align: center;
+  border: 2px solid #dedcdc;
 }
 
-.card {
-  padding: 2em;
+.input:focus {
+  outline: none;
 }
 
-.read-the-docs {
-  color: #888;
+.line-breaker {
+  width: 100%;
+  margin: 2px 0 2px 0;
+  font-size: medium;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.line-breaker > .line {
+  width: 45%;
+  display: block;
+  height: 2px;
+  background-color: #dedcdc;
+}
+
+.line-breaker-text {
+  width: 15%;
+}
+
+.location-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: medium;
+  border: none;
+  background-color: #43aefc;
+}
+
+.ul {
+  list-style: none;
+  text-align: center;
+  padding: 5px;
+}
+
+.ul > li {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  border-bottom: 1px solid #bdbbbb;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.li:last-child {
+  border: none;
 }
