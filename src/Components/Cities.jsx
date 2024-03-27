@@ -15,7 +15,6 @@ const Cities = () => {
   const selectedCity = (city) => {
     const { Key } = city;
     dispatch(updateCityKey(Key));
-    dispatch(updateCities(null));
   };
 
   if (cities?.length <= 0) return;

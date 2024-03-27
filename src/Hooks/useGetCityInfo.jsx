@@ -33,6 +33,7 @@ const useGetCityInfo = () => {
         temperatureInF: data[0]?.Temperature?.Imperial?.Value,
         weatherText: data[0]?.WeatherText,
         isDayTime: data[0]?.IsDayTime,
+        dateString: data[0]?.LocalObservationDateTime,
       };
       dispatch(updateCityWeather(obj));
     } catch (error) {

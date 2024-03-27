@@ -21,6 +21,7 @@ const useGetCityData = () => {
   const fetchData = async () => {
     const result = await fetch(`${FETCH_CITY_KEY}${userInputCity}`);
     const data = await result.json();
+    console.log("data:", data);
     dispatch(updateCities(data));
   };
 };
