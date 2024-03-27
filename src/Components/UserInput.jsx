@@ -1,11 +1,14 @@
 import useGetCityKey from "../Hooks/useGetCityKey";
 import { useDispatch, useSelector } from "react-redux";
 import { updateUserInputCity } from "../redux/citySlice";
+import useGetCityInfo from "../Hooks/useGetCityInfo";
 
 const UserInput = () => {
   const city = useSelector((state) => state.city?.userInputCity);
   const dispatch = useDispatch();
   useGetCityKey();
+
+  useGetCityInfo();
 
   return (
     <div className="input-container">

@@ -6,21 +6,32 @@ import { updateCityWeather } from "../redux/citySlice";
 const useGetCityInfo = () => {
   const dispatch = useDispatch();
   const cityKey = useSelector((state) => state.city?.cityKey);
+  console.log("city key:", cityKey);
   useEffect(() => {
-    fetchCityData();
+    if (cityKey) {
+      fetchCityData();
+    }
   }, [cityKey]);
+
+  if (!cityKey) return;
 
   const fetchCityData = async () => {
     try {
-      const result = await fetch(`${FETCH_CITY_INFO}${cityKey}`);
+      console.log(
+        `Req: ${FETCH_CITY_INFO}${cityKey}?apikey=${
+          import.meta.env.VITE_API_KEY
+        }`
+      );
+      const result = await fetch(
+        `${FETCH_CITY_INFO}${cityKey}?apikey=${import.meta.env.VITE_API_KEY}`
+      );
       const data = await result.json();
-      if (data) {
-        const obj = {
-          temperature: data?.Temperature?.Value,
-          weatherText: data?.WeatherText,
-        };
-        dispatch(updateCityWeather(obj));
-      }
+
+      const obj = {
+        temperature: data[0]?.Temperature?.Metric?.Value,
+        weatherText: data[0]?.WeatherText,
+      };
+      dispatch(updateCityWeather(obj));
     } catch (error) {
       console.warn(error?.message);
     }

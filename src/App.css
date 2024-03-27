@@ -19,6 +19,58 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+.weather-page-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  width: 30%;
+  background-color: #ffffff;
+  height: 30%;
+  overflow-y: auto;
+  padding: 0 10px 0 10px;
+}
+
+.weather-img {
+  width: 6rem;
+  height: 4rem;
+  margin: 1rem;
+}
+
+.temperature {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 400;
+}
+
+.weather-footer {
+  width: 30%;
+  background-color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  border-top: 2px solid #dedcdc;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.weather-footer-items {
+  display: flex;
+  width: 50%;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  border-right: 2px solid #dedcdc;
+}
+
+.weather-footer-items:last-child {
+  border: none;
+}
 
 .input-container {
   width: 100%;
