@@ -150,3 +150,11 @@
 .li:last-child {
   border: none;
 }
+
+.weather-text {
+  font-size: small;
+}
+
+.back-arrow {
+  cursor: pointer;
+}

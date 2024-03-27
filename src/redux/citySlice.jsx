@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const citySlice = createSlice({
   name: "city",
   initialState: {
-    cities: [],
+    cities: null,
     selectedCity: "",
     cityWeather: {},
     cityKey: "",
