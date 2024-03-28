@@ -6,7 +6,6 @@ const useDayOrNight = () => {
     (state) => state.city?.cityWeather?.dateString
   );
   const time = new Date(timeString);
-  console.log("time:", time);
   const hour = time.getHours();
 
   const sunRiseHour = 6;

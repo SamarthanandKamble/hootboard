@@ -9,7 +9,6 @@ import useGetCityInfo from "../Hooks/useGetCityInfo";
 
 const Cities = () => {
   const cities = useSelector((state) => state.city?.cities);
-
   const dispatch = useDispatch();
 
   const selectedCity = (city) => {

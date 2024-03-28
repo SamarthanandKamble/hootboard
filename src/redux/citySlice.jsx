@@ -8,6 +8,7 @@ export const citySlice = createSlice({
     cityWeather: {},
     cityKey: "",
     userInputCity: "",
+    error: "",
   },
   reducers: {
     updateCities: (state, action) => {
@@ -25,6 +26,9 @@ export const citySlice = createSlice({
     updateUserInputCity: (state, action) => {
       state.userInputCity = action.payload;
     },
+    updateError: (state, action) => {
+      state.error = action.payload;
+    },
   },
 });
 
@@ -34,6 +38,7 @@ export const {
   updateCityWeather,
   updateCityKey,
   updateUserInputCity,
+  updateError,
 } = citySlice.actions;
 
 export default citySlice.reducer;

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { FETCH_CITY_KEY } from "../constants";
 import { useDispatch, useSelector } from "react-redux";
-import { updateCities } from "../redux/citySlice";
+import { updateCities, updateError } from "../redux/citySlice";
 const useGetCityData = () => {
   const timerId = useRef();
   const dispatch = useDispatch();
@@ -19,10 +19,18 @@ const useGetCityData = () => {
   }, [userInputCity]);
 
   const fetchData = async () => {
-    const result = await fetch(`${FETCH_CITY_KEY}${userInputCity}`);
-    const data = await result.json();
-    console.log("data:", data);
-    dispatch(updateCities(data));
+    try {
+      const result = await fetch(`${FETCH_CITY_KEY}${userInputCity}`);
+      const data = await result.json();
+      if (data?.length > 0) {
+        dispatch(updateCities(data));
+        dispatch(updateError(""));
+      } else {
+        dispatch(updateError("No data found"));
+      }
+    } catch (error) {
+      dispatch(updateError(error?.message));
+    }
   };
 };
 

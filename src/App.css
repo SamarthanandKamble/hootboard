@@ -141,6 +141,7 @@
   font-size: medium;
   border: none;
   background-color: #43aefc;
+  cursor: pointer;
 }
 
 .ul {

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { FETCH_CITY_INFO } from "../constants";
 import { useDispatch, useSelector } from "react-redux";
-import { updateCityWeather } from "../redux/citySlice";
+import { updateCityWeather, updateError } from "../redux/citySlice";
 
 const useGetCityInfo = () => {
   const timerId = useRef();
@@ -27,7 +27,6 @@ const useGetCityInfo = () => {
         `${FETCH_CITY_INFO}${cityKey}?apikey=${import.meta.env.VITE_API_KEY}`
       );
       const data = await result.json();
-      console.log("obj:", data);
       const obj = {
         temperatureInC: data[0]?.Temperature?.Metric?.Value,
         temperatureInF: data[0]?.Temperature?.Imperial?.Value,
@@ -35,9 +34,14 @@ const useGetCityInfo = () => {
         isDayTime: data[0]?.IsDayTime,
         dateString: data[0]?.LocalObservationDateTime,
       };
-      dispatch(updateCityWeather(obj));
+      if (obj) {
+        dispatch(updateCityWeather(obj));
+        dispatch(updateError(""));
+      } else {
+        dispatch(updateError("Failed to fetch data for", cityKey));
+      }
     } catch (error) {
-      console.warn(error?.message);
+      dispatch(updateError(error?.message));
     }
   };
 };

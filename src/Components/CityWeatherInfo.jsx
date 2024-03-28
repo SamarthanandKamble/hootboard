@@ -6,8 +6,6 @@ import {
   faLocationDot,
   faMoon,
   faCloudSun,
-  faSun,
-  faCloud,
   faCloudRain,
   faSnowflake,
   faSunPlantWilt,
@@ -15,15 +13,16 @@ import {
   faCloudMoonRain,
 } from "@fortawesome/free-solid-svg-icons";
 import useDayOrNight from "../Hooks/useDayOrNight";
+import useGetCityInfoByCoord from "../Hooks/useGetCityInfoByCoord";
 
 const CityWeatherInfo = () => {
   useGetCityInfo();
+  
   const weatherData = useSelector((state) => state.city?.cityWeather);
   const cities = useSelector((state) => state.city?.cities);
   const cityKey = useSelector((state) => state.city?.cityKey);
   const userInputCity = useSelector((state) => state.city?.userInputCity);
   const isDay = useDayOrNight();
-  console.log("Is day ?", isDay);
 
   const weatherDayIcon = {
     clear: faSunPlantWilt,
@@ -36,7 +35,7 @@ const CityWeatherInfo = () => {
     clear: faMoon,
     cloudy: faCloudMoon,
     rainy: faCloudMoonRain,
-    snowy: faSnowflake, 
+    snowy: faSnowflake,
   };
 
   const selectWeatherIcon = () => {
@@ -87,7 +86,7 @@ const CityWeatherInfo = () => {
         <div className="weather-text">
           <FontAwesomeIcon icon={faLocationDot} className="weather-icon" />
           <span className="weather-info">{userInputCity?.toUpperCase()},</span>
-          <span className="weather-info">{getState().toUpperCase()}</span>
+          <span className="weather-info">{getState()?.toUpperCase()}</span>
         </div>
       </div>
       <div className="weather-footer">

@@ -11,9 +11,11 @@ import {
 const Header = ({ title }) => {
   const cityKey = useSelector((state) => state.city?.cityKey);
   const dispatch = useDispatch();
+
   const goBackToUserInput = () => {
     dispatch(updateCityKey(""));
-    dispatch(updateUserInputCity(null));
+    dispatch(updateUserInputCity(""));
+    dispatch(updateCities(null));
   };
   return (
     <div className="header">
