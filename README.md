@@ -36,3 +36,10 @@ To run the project locally in development mode, use the following command:
 ```bash
 npm run dev
 ```
+
+## Testing
+
+This project uses Vite for testing. To run the test cases, use the following command:
+```bash
+npm run test
+```
