@@ -11,6 +11,7 @@ import {
   faSunPlantWilt,
   faCloudMoon,
   faCloudMoonRain,
+  faCloudSunRain,
 } from "@fortawesome/free-solid-svg-icons";
 import useDayOrNight from "../Hooks/useDayOrNight";
 import useGetCityInfoByCoord from "../Hooks/useGetCityInfoByCoord";
@@ -28,12 +29,12 @@ const CityWeatherInfo = () => {
   const weatherDayIcon = {
     clear: faSunPlantWilt,
     cloudy: faCloudSun,
-    rainy: faCloudRain,
+    rainy: faCloudSunRain,
     snowy: faSnowflake,
   };
 
   const weatherNightIcon = {
-    clear: faMoon,
+    clear: faCloudMoon,
     cloudy: faCloudMoon,
     rainy: faCloudMoonRain,
     snowy: faSnowflake,
@@ -70,74 +71,39 @@ const CityWeatherInfo = () => {
     return state;
   };
 
-  useEffect(() => {
-    if (cities?.length > 0) {
-      setIsLoading(false);
-    }
-  }, [cities]);
-
   if (!weatherData) {
     return;
   }
   return (
     <>
-      {isLoading ? (
-        <>
-          <div className="weather-page-container">
-            <div className="weather-img-loading"></div>
-            <div className="temperature-loading"></div>
-            <div className="weather-text-loading"></div>
-            <div className="weather-text-loading">
-              <span className="weather-icon-loading"></span>
-              <span className="weather-info-loading"></span>
-              <span className="weather-info-loading"></span>
-            </div>
-          </div>
-          <div className="weather-footer-loading">
-            <span className="weather-footer-items-loading"></span>
-            <span className="weather-footer-items-loading"></span>
-          </div>
-        </>
-      ) : (
-        <>
-          <div className="weather-page-container">
-            <div>
-              <FontAwesomeIcon
-                className="weather-img"
-                icon={selectWeatherIcon()}
-              />
-            </div>
-            <div className="temperature">
-              {weatherData?.temperatureInC}
-              {"°"}C
-            </div>
-            <div className="weather-text">
-              {weatherData?.weatherText?.toUpperCase()}
-            </div>
-            <div className="weather-text">
-              <FontAwesomeIcon icon={faLocationDot} className="weather-icon" />
-              <span className="weather-info">
-                {userInputCity?.toUpperCase()},
-              </span>
-              <span className="weather-info">{getState()?.toUpperCase()}</span>
-            </div>
-          </div>
-          <div className="weather-footer">
-            <span className="weather-footer-items">
-              {weatherData?.temperatureInF}
-              {"°"}F
-            </span>
-            {weatherData?.isDayTime ? (
-              <FontAwesomeIcon
-                className="weather-footer-items"
-                icon={faCloudSun}
-              />
-            ) : (
-              <FontAwesomeIcon className="weather-footer-items" icon={faMoon} />
-            )}
-          </div>
-        </>
-      )}
+      <div className="weather-page-container">
+        <div>
+          <FontAwesomeIcon className="weather-img" icon={selectWeatherIcon()} />
+        </div>
+        <div className="temperature">
+          {weatherData?.temperatureInC}
+          {"°"}C
+        </div>
+        <div className="weather-text">
+          {weatherData?.weatherText?.toUpperCase()}
+        </div>
+        <div className="weather-text">
+          <FontAwesomeIcon icon={faLocationDot} className="weather-icon" />
+          <span className="weather-info">{userInputCity?.toUpperCase()},</span>
+          <span className="weather-info">{getState()?.toUpperCase()}</span>
+        </div>
+      </div>
+      <div className="weather-footer">
+        <span className="weather-footer-items">
+          {weatherData?.temperatureInF}
+          {"°"}F
+        </span>
+        {weatherData?.isDayTime ? (
+          <FontAwesomeIcon className="weather-footer-items" icon={faCloudSun} />
+        ) : (
+          <FontAwesomeIcon className="weather-footer-items" icon={faMoon} />
+        )}
+      </div>
     </>
   );
 };

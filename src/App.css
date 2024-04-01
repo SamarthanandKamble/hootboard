@@ -252,6 +252,16 @@
 
 .back-arrow {
   cursor: pointer;
+  height: 20px;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  color: none;
+}
+
+.back-arrow-icon {
+  color: #43aefc;
+  height: 100%;
 }
 
 .cities-loading {

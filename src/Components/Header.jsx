@@ -23,11 +23,13 @@ const Header = ({ title }) => {
     <div className="header">
       {cityKey ? (
         <div className="weather-header">
-          <FontAwesomeIcon
-            icon={faArrowLeft}
+          <button
+            type="button"
             className="back-arrow"
             onClick={goBackToUserInput}
-          />
+          >
+            <FontAwesomeIcon icon={faArrowLeft} className="back-arrow-icon"/>
+          </button>
           <span>{title}</span>
         </div>
       ) : (

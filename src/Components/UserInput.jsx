@@ -52,7 +52,7 @@ const UserInput = () => {
     <>
       <form className="input-container" onSubmit={handleFormSubmit}>
         <input
-          type="search"
+          type="text"
           className="input"
           placeholder="Enter city name"
           value={city}
