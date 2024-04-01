@@ -17,7 +17,7 @@ const Cities = () => {
   };
 
   if (cities?.length <= 0) return;
-
+  console.log("cities:", cities);
   return (
     <ul className="ul">
       {cities?.map((city) => (

@@ -4,11 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   updateCities,
   updateCityKey,
-  updateCityWeather,
   updateError,
   updateUserInputCity,
 } from "../redux/citySlice";
-import { useState, useSyncExternalStore } from "react";
+import { useState } from "react";
 import useGetCityInfoByCoord from "../Hooks/useGetCityInfoByCoord";
 
 const UserInput = () => {

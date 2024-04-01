@@ -17,7 +17,7 @@ import useGetCityInfoByCoord from "../Hooks/useGetCityInfoByCoord";
 
 const CityWeatherInfo = () => {
   useGetCityInfo();
-  
+
   const weatherData = useSelector((state) => state.city?.cityWeather);
   const cities = useSelector((state) => state.city?.cities);
   const cityKey = useSelector((state) => state.city?.cityKey);
@@ -70,6 +70,8 @@ const CityWeatherInfo = () => {
   };
 
   if (!weatherData) return;
+
+  console.log("weather data:", weatherData);
   return (
     <>
       <div className="weather-page-container">

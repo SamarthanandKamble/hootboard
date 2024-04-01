@@ -1,0 +1,7 @@
+{
+  "temperatureInC": 38.2,
+  "temperatureInF": 101,
+  "weatherText": "Hazy sunshine",
+  "isDayTime": true,
+  "dateString": "2024-04-01T11:57:00+05:30"
+}

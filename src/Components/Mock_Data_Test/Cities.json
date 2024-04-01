@@ -1,0 +1,362 @@
+[
+  {
+    "Version": 1,
+    "Key": "204849",
+    "Type": "City",
+    "Rank": 25,
+    "LocalizedName": "Solapur",
+    "EnglishName": "Solapur",
+    "PrimaryPostalCode": "",
+    "Region": {
+      "ID": "ASI",
+      "LocalizedName": "Asia",
+      "EnglishName": "Asia"
+    },
+    "Country": {
+      "ID": "IN",
+      "LocalizedName": "India",
+      "EnglishName": "India"
+    },
+    "AdministrativeArea": {
+      "ID": "MH",
+      "LocalizedName": "Maharashtra",
+      "EnglishName": "Maharashtra",
+      "Level": 1,
+      "LocalizedType": "State",
+      "EnglishType": "State",
+      "CountryID": "IN"
+    },
+    "TimeZone": {
+      "Code": "IST",
+      "Name": "Asia/Kolkata",
+      "GmtOffset": 5.5,
+      "IsDaylightSaving": false,
+      "NextOffsetChange": null
+    },
+    "GeoPosition": {
+      "Latitude": 17.656,
+      "Longitude": 75.896,
+      "Elevation": {
+        "Metric": {
+          "Value": 450,
+          "Unit": "m",
+          "UnitType": 5
+        },
+        "Imperial": {
+          "Value": 1476,
+          "Unit": "ft",
+          "UnitType": 0
+        }
+      }
+    },
+    "IsAlias": false,
+    "SupplementalAdminAreas": [
+      {
+        "Level": 2,
+        "LocalizedName": "Solapur",
+        "EnglishName": "Solapur"
+      },
+      {
+        "Level": 3,
+        "LocalizedName": "Solapur North",
+        "EnglishName": "Solapur North"
+      }
+    ],
+    "DataSets": [
+      "AirQualityCurrentConditions",
+      "AirQualityForecasts",
+      "Alerts",
+      "FutureRadar",
+      "MinuteCast",
+      "PremiumAirQuality"
+    ]
+  },
+  {
+    "Version": 1,
+    "Key": "3245172",
+    "Type": "City",
+    "Rank": 85,
+    "LocalizedName": "Solapur",
+    "EnglishName": "Solapur",
+    "PrimaryPostalCode": "",
+    "Region": {
+      "ID": "ASI",
+      "LocalizedName": "Asia",
+      "EnglishName": "Asia"
+    },
+    "Country": {
+      "ID": "IN",
+      "LocalizedName": "India",
+      "EnglishName": "India"
+    },
+    "AdministrativeArea": {
+      "ID": "JH",
+      "LocalizedName": "Jharkhand",
+      "EnglishName": "Jharkhand",
+      "Level": 1,
+      "LocalizedType": "State",
+      "EnglishType": "State",
+      "CountryID": "IN"
+    },
+    "TimeZone": {
+      "Code": "IST",
+      "Name": "Asia/Kolkata",
+      "GmtOffset": 5.5,
+      "IsDaylightSaving": false,
+      "NextOffsetChange": null
+    },
+    "GeoPosition": {
+      "Latitude": 25.118,
+      "Longitude": 87.69,
+      "Elevation": {
+        "Metric": {
+          "Value": 108,
+          "Unit": "m",
+          "UnitType": 5
+        },
+        "Imperial": {
+          "Value": 354,
+          "Unit": "ft",
+          "UnitType": 0
+        }
+      }
+    },
+    "IsAlias": false,
+    "SupplementalAdminAreas": [
+      {
+        "Level": 2,
+        "LocalizedName": "Sahibganj",
+        "EnglishName": "Sahibganj"
+      },
+      {
+        "Level": 3,
+        "LocalizedName": "Borio",
+        "EnglishName": "Borio"
+      }
+    ],
+    "DataSets": [
+      "AirQualityCurrentConditions",
+      "AirQualityForecasts",
+      "Alerts",
+      "FutureRadar",
+      "MinuteCast",
+      "PremiumAirQuality"
+    ]
+  },
+  {
+    "Version": 1,
+    "Key": "2927975",
+    "Type": "City",
+    "Rank": 85,
+    "LocalizedName": "Solapur",
+    "EnglishName": "Solapur",
+    "PrimaryPostalCode": "",
+    "Region": {
+      "ID": "ASI",
+      "LocalizedName": "Asia",
+      "EnglishName": "Asia"
+    },
+    "Country": {
+      "ID": "IN",
+      "LocalizedName": "India",
+      "EnglishName": "India"
+    },
+    "AdministrativeArea": {
+      "ID": "OR",
+      "LocalizedName": "Odisha",
+      "EnglishName": "Odisha",
+      "Level": 1,
+      "LocalizedType": "State",
+      "EnglishType": "State",
+      "CountryID": "IN"
+    },
+    "TimeZone": {
+      "Code": "IST",
+      "Name": "Asia/Kolkata",
+      "GmtOffset": 5.5,
+      "IsDaylightSaving": false,
+      "NextOffsetChange": null
+    },
+    "GeoPosition": {
+      "Latitude": 19.951,
+      "Longitude": 86.015,
+      "Elevation": {
+        "Metric": {
+          "Value": 6,
+          "Unit": "m",
+          "UnitType": 5
+        },
+        "Imperial": {
+          "Value": 19,
+          "Unit": "ft",
+          "UnitType": 0
+        }
+      }
+    },
+    "IsAlias": false,
+    "SupplementalAdminAreas": [
+      {
+        "Level": 2,
+        "LocalizedName": "Puri",
+        "EnglishName": "Puri"
+      },
+      {
+        "Level": 3,
+        "LocalizedName": "Gop",
+        "EnglishName": "Gop"
+      }
+    ],
+    "DataSets": [
+      "AirQualityCurrentConditions",
+      "AirQualityForecasts",
+      "Alerts",
+      "FutureRadar",
+      "MinuteCast",
+      "PremiumAirQuality"
+    ]
+  },
+  {
+    "Version": 1,
+    "Key": "2906905",
+    "Type": "City",
+    "Rank": 85,
+    "LocalizedName": "Solapur",
+    "EnglishName": "Solapur",
+    "PrimaryPostalCode": "",
+    "Region": {
+      "ID": "ASI",
+      "LocalizedName": "Asia",
+      "EnglishName": "Asia"
+    },
+    "Country": {
+      "ID": "IN",
+      "LocalizedName": "India",
+      "EnglishName": "India"
+    },
+    "AdministrativeArea": {
+      "ID": "OR",
+      "LocalizedName": "Odisha",
+      "EnglishName": "Odisha",
+      "Level": 1,
+      "LocalizedType": "State",
+      "EnglishType": "State",
+      "CountryID": "IN"
+    },
+    "TimeZone": {
+      "Code": "IST",
+      "Name": "Asia/Kolkata",
+      "GmtOffset": 5.5,
+      "IsDaylightSaving": false,
+      "NextOffsetChange": null
+    },
+    "GeoPosition": {
+      "Latitude": 21.064,
+      "Longitude": 86.324,
+      "Elevation": {
+        "Metric": {
+          "Value": 28,
+          "Unit": "m",
+          "UnitType": 5
+        },
+        "Imperial": {
+          "Value": 91,
+          "Unit": "ft",
+          "UnitType": 0
+        }
+      }
+    },
+    "IsAlias": false,
+    "SupplementalAdminAreas": [
+      {
+        "Level": 2,
+        "LocalizedName": "Bhadrak",
+        "EnglishName": "Bhadrak"
+      },
+      {
+        "Level": 3,
+        "LocalizedName": "Bhandari Pokhari",
+        "EnglishName": "Bhandari Pokhari"
+      }
+    ],
+    "DataSets": [
+      "AirQualityCurrentConditions",
+      "AirQualityForecasts",
+      "Alerts",
+      "FutureRadar",
+      "MinuteCast",
+      "PremiumAirQuality"
+    ]
+  },
+  {
+    "Version": 1,
+    "Key": "2910468",
+    "Type": "City",
+    "Rank": 85,
+    "LocalizedName": "Solapur",
+    "EnglishName": "Solapur",
+    "PrimaryPostalCode": "",
+    "Region": {
+      "ID": "ASI",
+      "LocalizedName": "Asia",
+      "EnglishName": "Asia"
+    },
+    "Country": {
+      "ID": "IN",
+      "LocalizedName": "India",
+      "EnglishName": "India"
+    },
+    "AdministrativeArea": {
+      "ID": "OR",
+      "LocalizedName": "Odisha",
+      "EnglishName": "Odisha",
+      "Level": 1,
+      "LocalizedType": "State",
+      "EnglishType": "State",
+      "CountryID": "IN"
+    },
+    "TimeZone": {
+      "Code": "IST",
+      "Name": "Asia/Kolkata",
+      "GmtOffset": 5.5,
+      "IsDaylightSaving": false,
+      "NextOffsetChange": null
+    },
+    "GeoPosition": {
+      "Latitude": 20.857,
+      "Longitude": 85.923,
+      "Elevation": {
+        "Metric": {
+          "Value": 31,
+          "Unit": "m",
+          "UnitType": 5
+        },
+        "Imperial": {
+          "Value": 101,
+          "Unit": "ft",
+          "UnitType": 0
+        }
+      }
+    },
+    "IsAlias": false,
+    "SupplementalAdminAreas": [
+      {
+        "Level": 2,
+        "LocalizedName": "Jajapur",
+        "EnglishName": "Jajapur"
+      },
+      {
+        "Level": 3,
+        "LocalizedName": "Sukinda",
+        "EnglishName": "Sukinda"
+      }
+    ],
+    "DataSets": [
+      "AirQualityCurrentConditions",
+      "AirQualityForecasts",
+      "Alerts",
+      "FutureRadar",
+      "MinuteCast",
+      "PremiumAirQuality"
+    ]
+  }
+]
