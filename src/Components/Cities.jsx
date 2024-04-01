@@ -17,10 +17,9 @@ const Cities = () => {
   };
 
   if (cities?.length <= 0) return;
-  console.log("cities:", cities);
   return (
     <ul className="ul">
-      {cities?.map((city) => (
+      {cities?.slice(0, 5).map((city) => (
         <li key={city?.Key} onClick={() => selectedCity(city)} className="li">
           <span>{city?.LocalizedName}</span>
           <span>{city?.AdministrativeArea?.ID}</span>

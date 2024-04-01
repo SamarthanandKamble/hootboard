@@ -71,7 +71,6 @@ const CityWeatherInfo = () => {
 
   if (!weatherData) return;
 
-  console.log("weather data:", weatherData);
   return (
     <>
       <div className="weather-page-container">

@@ -13,7 +13,7 @@ const useGetCityData = () => {
       if (userInputCity?.length > 0) {
         fetchData();
       }
-    }, 400);
+    }, 200);
 
     return () => clearTimeout(timerId.current);
   }, [userInputCity]);

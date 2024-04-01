@@ -17,10 +17,8 @@ const Home = () => {
       ) : (
         <>
           <div className="home-container">
-            <div>
-              <UserInput />
-              <Cities />
-            </div>
+            <UserInput />
+            <Cities />
           </div>
         </>
       )}
