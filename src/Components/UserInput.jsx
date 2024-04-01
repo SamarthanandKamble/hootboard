@@ -66,7 +66,7 @@ const UserInput = () => {
         </div>
       </form>
       <button className="location-btn" onClick={getLocationCoordinates}>
-        Get device location
+        Get Device Location
       </button>
     </>
   );
