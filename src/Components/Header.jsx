@@ -5,6 +5,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import {
   updateCities,
   updateCityKey,
+  updateCityWeather,
   updateUserInputCity,
 } from "../redux/citySlice";
 
@@ -16,6 +17,7 @@ const Header = ({ title }) => {
     dispatch(updateCityKey(""));
     dispatch(updateUserInputCity(""));
     dispatch(updateCities(null));
+    dispatch(updateCityWeather({}));
   };
   return (
     <div className="header">

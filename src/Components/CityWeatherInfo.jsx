@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import useGetCityInfo from "../Hooks/useGetCityInfo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,6 +17,7 @@ import useGetCityInfoByCoord from "../Hooks/useGetCityInfoByCoord";
 
 const CityWeatherInfo = () => {
   useGetCityInfo();
+  const [isLoading, setIsLoading] = useState(true);
 
   const weatherData = useSelector((state) => state.city?.cityWeather);
   const cities = useSelector((state) => state.city?.cities);
@@ -69,38 +70,74 @@ const CityWeatherInfo = () => {
     return state;
   };
 
-  if (!weatherData) return;
+  useEffect(() => {
+    if (cities?.length > 0) {
+      setIsLoading(false);
+    }
+  }, [cities]);
 
+  if (!weatherData) {
+    return;
+  }
   return (
     <>
-      <div className="weather-page-container">
-        <div>
-          <FontAwesomeIcon className="weather-img" icon={selectWeatherIcon()} />
-        </div>
-        <div className="temperature">
-          {weatherData?.temperatureInC}
-          {"°"}C
-        </div>
-        <div className="weather-text">
-          {weatherData?.weatherText?.toUpperCase()}
-        </div>
-        <div className="weather-text">
-          <FontAwesomeIcon icon={faLocationDot} className="weather-icon" />
-          <span className="weather-info">{userInputCity?.toUpperCase()},</span>
-          <span className="weather-info">{getState()?.toUpperCase()}</span>
-        </div>
-      </div>
-      <div className="weather-footer">
-        <span className="weather-footer-items">
-          {weatherData?.temperatureInF}
-          {"°"}F
-        </span>
-        {weatherData?.isDayTime ? (
-          <FontAwesomeIcon className="weather-footer-items" icon={faCloudSun} />
-        ) : (
-          <FontAwesomeIcon className="weather-footer-items" icon={faMoon} />
-        )}
-      </div>
+      {isLoading ? (
+        <>
+          <div className="weather-page-container">
+            <div className="weather-img-loading"></div>
+            <div className="temperature-loading"></div>
+            <div className="weather-text-loading"></div>
+            <div className="weather-text-loading">
+              <span className="weather-icon-loading"></span>
+              <span className="weather-info-loading"></span>
+              <span className="weather-info-loading"></span>
+            </div>
+          </div>
+          <div className="weather-footer-loading">
+            <span className="weather-footer-items-loading"></span>
+            <span className="weather-footer-items-loading"></span>
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="weather-page-container">
+            <div>
+              <FontAwesomeIcon
+                className="weather-img"
+                icon={selectWeatherIcon()}
+              />
+            </div>
+            <div className="temperature">
+              {weatherData?.temperatureInC}
+              {"°"}C
+            </div>
+            <div className="weather-text">
+              {weatherData?.weatherText?.toUpperCase()}
+            </div>
+            <div className="weather-text">
+              <FontAwesomeIcon icon={faLocationDot} className="weather-icon" />
+              <span className="weather-info">
+                {userInputCity?.toUpperCase()},
+              </span>
+              <span className="weather-info">{getState()?.toUpperCase()}</span>
+            </div>
+          </div>
+          <div className="weather-footer">
+            <span className="weather-footer-items">
+              {weatherData?.temperatureInF}
+              {"°"}F
+            </span>
+            {weatherData?.isDayTime ? (
+              <FontAwesomeIcon
+                className="weather-footer-items"
+                icon={faCloudSun}
+              />
+            ) : (
+              <FontAwesomeIcon className="weather-footer-items" icon={faMoon} />
+            )}
+          </div>
+        </>
+      )}
     </>
   );
 };

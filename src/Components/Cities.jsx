@@ -1,14 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  updateCities,
-  updateCityKey,
-  updateUserInputCity,
-} from "../redux/citySlice";
-import useGetCityInfo from "../Hooks/useGetCityInfo";
+import { updateCityKey } from "../redux/citySlice";
 
 const Cities = () => {
   const cities = useSelector((state) => state.city?.cities);
+  const city = useSelector((state) => state.city?.userInputCity);
   const dispatch = useDispatch();
 
   const selectedCity = (city) => {
@@ -16,16 +12,25 @@ const Cities = () => {
     dispatch(updateCityKey(Key));
   };
 
-  if (cities?.length <= 0) return;
+  if (cities?.length <= 0) {
+    return;
+  }
   return (
-    <ul className="ul">
-      {cities?.slice(0, 5).map((city) => (
-        <li key={city?.Key} onClick={() => selectedCity(city)} className="li">
-          <span>{city?.LocalizedName}</span>
-          <span>{city?.AdministrativeArea?.ID}</span>
-        </li>
-      ))}
-    </ul>
+    <>
+      <ul className="ul">
+        {city.length > 0 &&
+          cities?.slice(0, 5).map((city) => (
+            <li
+              key={city?.Key}
+              onClick={() => selectedCity(city)}
+              className="li"
+            >
+              <span>{city?.LocalizedName}</span>
+              <span>{city?.AdministrativeArea?.ID}</span>
+            </li>
+          ))}
+      </ul>
+    </>
   );
 };
 

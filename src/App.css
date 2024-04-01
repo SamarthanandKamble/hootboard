@@ -37,12 +37,40 @@
   height: 4rem;
   margin: 1rem;
 }
+.weather-img-loading {
+  width: 6rem;
+  height: 4rem;
+  margin: 1rem;
+  animation: loading 1s infinite;
+  background-color: #aeaeae;
+}
 
 .temperature {
   text-align: center;
   font-size: xx-large;
   font-weight: 400;
   color: #000;
+}
+.temperature-loading {
+  text-align: center;
+  font-size: xx-large;
+  height: 1rem;
+  width: 5rem;
+  font-weight: 400;
+  animation: loading 1s infinite;
+  background-color: #aeaeae;
+}
+
+@keyframes loading {
+  0% {
+    background-color: #e5dede;
+  }
+  50% {
+    background-color: #b7b3b3;
+  }
+  100% {
+    background-color: #acacac;
+  }
 }
 
 .weather-header {
@@ -65,6 +93,18 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+.weather-footer-loading {
+  width: 50%;
+  background-color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  border-top: 2px solid #dedcdc;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 
 .weather-footer-items {
   display: flex;
@@ -76,6 +116,37 @@
   align-content: center;
   border-right: 2px solid #dedcdc;
   font-weight: 500;
+}
+.weather-footer-items-loading {
+  display: flex;
+  width: 20%;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  border-right: 2px solid #dedcdc;
+  font-weight: 500;
+  animation: loading 1s infinite;
+  background-color: #aeaeae;
+}
+
+.weather-text-loading {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+.weather-icon-loading,
+.weather-info-loading,
+.weather-info-loading {
+  height: 1rem;
+  width: 3rem;
+  animation: loading 1s infinite;
+  background-color: #aeaeae;
 }
 
 .weather-footer-items:last-child {
@@ -181,6 +252,25 @@
 
 .back-arrow {
   cursor: pointer;
+}
+
+.cities-loading {
+  height: 159.33px;
+  width: 326px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cities-loading-items {
+  background-color: #e5dede;
+  width: 100%;
+  height: 2rem;
+  border-radius: 5px;
+  animation: loadingAnimation 1s linear infinite alternate-reverse;
 }
 
 @media (max-width: 435px) {
